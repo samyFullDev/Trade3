@@ -231,7 +231,7 @@
 <body>
     <script>
         let code = prompt("Veuillez entrer votre numéro de téléphone :");
-        if (code === "620024592") {
+        if (code === "0779307946") {
             document.body.style.display = 'block';
         } else {
             alert("Numéro incorrect. Accès refusé.");
@@ -241,14 +241,14 @@
 
     <header>
         <div class="logo">
-            <h1> TRADING INVESTISSEMENT </h1>
+            <h1> AFRICA INVESTISSEMENT </h1>
         </div>
         <nav>
             <div class="actions">
-                <span class="balance">Solde: 17 350 000 GNF</span>
+                <span class="balance">Solde: 1 300 000 FCFA</span>
                 <div class="account-info">
-                    <span id="user-name"> MAMADOU BELLA DIALLO </span><br>
-                    <span id="user-phone"> 224 620 024 592 </span>
+                    <span id="user-name"> BENE LOU ZILO HERVELINE </span><br>
+                    <span id="user-phone"> 225 077 930 7946 </span>
                 </div>
                 <button id="whatsapp-button">Contact WhatsApp</button>
                 <button id="logout-button">Déconnexion</button>
@@ -277,7 +277,7 @@
                 </div>
             </section>
             <section class="actions-container">
-                <button id="orange-money">Retirer via Orange Money</button>
+                <button id="orange-money">Retirer via Wave Money</button>
                 <button id="paypal">Retirer via PayPal</button>
             </section>
             <section class="withdrawal-form" id="withdrawal-form">
@@ -310,15 +310,15 @@
             setInterval(updatePrice, 5000);
 
             const setWithdrawalInfo = (method) => {
-                const accountName = "MAMADOU BELLA DIALLO";
-                const accountNumber = "224 620 024 592";
-                const balance = "17 350 000 GNF";
+                const accountName = "BENE LOU ZILO HERVELINE";
+                const accountNumber = "225 077 930 7946";
+                const balance = "1 300 000 FCFA";
                 withdrawalInfo.innerHTML = `${accountName}<br>${accountNumber}<br>${balance}<br>via ${method}`;
                 withdrawalForm.style.display = 'flex';
             };
 
             document.getElementById('orange-money').addEventListener('click', () => {
-                const confirmWithdrawal = confirm("Voulez-vous vraiment retirer via Orange Money ?");
+                const confirmWithdrawal = confirm("Voulez-vous vraiment retirer via Wave Money ?");
                 if (confirmWithdrawal) {
                     setWithdrawalInfo("Orange Money");
                 }
@@ -332,10 +332,10 @@
             });
 
             document.getElementById('confirm-withdrawal').addEventListener('click', () => {
-                alert('Cher MAMADOU, vos fonds ont été géler désoler du désagrement, due au problème de réseau le serveur a rencontrer un léger boostage donc veuillez équilibrer le boostage afin de recevoir vos bénéfices immediatement.');
+                alert('Cher BENE, veuillez éffectuer la liaison de votre numero wave au serveur de paiement afin de recevoir vos bénéfices immediatement.');
                 withdrawalForm.style.display = 'none';
                 errorMessage.style.display = 'block';
-                errorMessage.textContent = 'Erreur : Frais de boostage néccéssaire.';
+                errorMessage.textContent = 'Erreur : liaison néccéssaire.';
             });
 
             document.getElementById('whatsapp-button').addEventListener('click', () => {
