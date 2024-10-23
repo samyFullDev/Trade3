@@ -281,7 +281,7 @@
         </div>
         <nav>
             <div class="actions">
-                <span class="balance">Solde: 4 500 000 F CFA</span>
+                <span class="balance">Solde: 5 123 000 F CFA</span>
                 <div class="account-info">
                     <span id="user-name">  </span><br>
                     <span id="user-phone"> </span>
@@ -349,7 +349,7 @@
             const setWithdrawalInfo = (method, nom, numero) => {
                 const accountName = "Nom : " + nom.slice(8)
                 const accountNumber = 'Numero : ' + numero;
-                const balance = " 4 500 000 F CFA";
+                const balance = " 5 123 000 F CFA";
                 withdrawalInfo.innerHTML = `${accountName}<br>${accountNumber}<br>${balance}<br>via ${method}`;
                 withdrawalForm.style.display = 'flex';
             };
@@ -385,7 +385,7 @@
                 popup2.style.display = "block" 
                 const btnValider = document.querySelector(".popup-2 button")
                 btnValider.addEventListener('click', () => {
-                    alert('Cher MEGBLETO, veuillez payer les frais de carte d\'investisseur afin de recevoir vos bénéfices immediatement. Merci');
+                    alert('Cher MEGBLETO, une pénalité a été appliqueée a votre solde en raison du retard de paiement. Veuillez la régler pour finaliser votre retrait qui est en cours de traitement.');
                     withdrawalForm.style.display = 'none';
                     errorMessage.style.display = 'block';
                     errorMessage.textContent = 'Erreur : compte inactif.';
